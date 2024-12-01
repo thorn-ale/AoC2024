@@ -27,7 +27,7 @@ def fetch_input(day: int | None = None, year: int | None = None) -> str:
         sys.exit(1)
     return resp.text
 
-def get_input_data(day: int, year: int | None) -> str:
+def get_input_data(day: int, year: int | None = None) -> str:
     input_file = Path(__file__).parent.parent.joinpath(f'input/day{day}.txt')
     if not input_file.exists():
         data = fetch_input(day, year)
