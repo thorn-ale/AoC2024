@@ -10,17 +10,20 @@ def main():
     for i in range(1, 26):
         daily_src = src_dir.joinpath(f'day{i}.py')
         if not daily_src.exists():
-            open(daily_src, 'w', encoding='utf-8').write(f"""from dataloader import get_input_data
+            open(
+                daily_src, 'w', encoding='utf-8'
+            ).write(f"""from dataloader import get_input_data
 
 
 def main():
-    data = get_input_data({i})
+    _data = get_input_data({i})
 
 
 if __name__ == '__main__':
     main()
 
 """)
+
 
 if __name__ == '__main__':
     main()
