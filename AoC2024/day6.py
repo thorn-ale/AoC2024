@@ -1,6 +1,5 @@
 from math import ceil
 from multiprocessing import Pool, cpu_count
-from pprint import pprint
 from dataloader import get_input_data
 from vectors import Vec2i, NORTH, SOUTH, EAST, WEST
 
@@ -62,8 +61,7 @@ def main():
     direction = map[guard]
     map[guard] = '.'
     path = set([pos for pos, _ in walk(map, guard, direction)])
-    print(len(path)) # 5305
-    # 2143 
+    print(len(path))
     pc = cpu_count()*2
     size = ceil(len(path)/pc)
     path = list(path)
