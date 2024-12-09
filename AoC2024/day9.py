@@ -70,7 +70,6 @@ def part2(disk_repr: list[int]) -> int:
 
 def main():
     data = get_input_data(9).strip()
-    # data = '2333133121414131402'
     disk_repr = []
     file_block = True
     file_idx = 0
@@ -82,13 +81,10 @@ def main():
             disk_repr += [-1] * int(value)
         file_block = not file_block
     p1_hash = part1(disk_repr.copy())
-    print(p1_hash)  # 6225730762521
+    print(p1_hash)
 
     p2_hash = part2(disk_repr.copy())
-    print(p2_hash)  # 6250605700557
-
-    assert p1_hash == 6225730762521
-    assert p2_hash == 6250605700557
+    print(p2_hash)
 
 
 if __name__ == '__main__':
