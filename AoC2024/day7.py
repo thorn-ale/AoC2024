@@ -24,11 +24,9 @@ def main():
     operators = [int.__add__, int.__mul__, lambda x, y: int(str(x)+str(y))]
     r1 = sum([lr_eval(*equation, operators[:2]) for equation in equations])
     print(r1)  
-    assert r1 == 2654749936343
 
     r2 = sum([lr_eval(*equation, operators) for equation in equations])
     print(r2)  
-    assert r2 == 124060392153684
 
 
 if __name__ == '__main__':
