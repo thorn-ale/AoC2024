@@ -32,8 +32,8 @@ def blink_stone(stone: int, depth: int) -> int:
 
 def main():
     stones = get_input_data(11, parser=lambda x: list(map(int, x.strip().split())))
-    print(sum([blink_stone(x, 25) for x in stones]))  # 239714
-    print(sum([blink_stone(x, 75) for x in stones]))  # 284973560658514
+    print(sum([blink_stone(x, 25) for x in stones]))
+    print(sum([blink_stone(x, 75) for x in stones]))
 
 
 if __name__ == '__main__':
